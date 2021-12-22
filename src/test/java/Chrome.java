@@ -12,6 +12,13 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class Chrome {
+
+    /*
+    *
+    * For web view testing
+    *
+     */
+
     AppiumDriver driver;
 
     @BeforeClass
