@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Chrome {
+public class Youtube {
 
     /*
     *
@@ -31,8 +31,8 @@ public class Chrome {
         cap.setCapability("platformName", "Android");
         cap.setCapability("automationName", "UiAutomator1");
 
-        cap.setCapability("appPackage", "com.android.chrome");
-        cap.setCapability("appActivity", "org.chromium.chrome.browser.document.ChromeLauncherActivity");
+        cap.setCapability("appPackage", "com.google.android.youtube");
+        cap.setCapability("appActivity", "com.google.android.libraries.youtube.player.features.gl.vr.VrWelcomeActivity");
 
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), cap);
     }
@@ -45,9 +45,9 @@ public class Chrome {
     public void testWebView() throws InterruptedException {
         Thread.sleep(5000);
         driver.context(getWebContext(driver));
-        driver.get("courseweb.sliit.lk");
+        driver.get("https://youtu.be/Rt_UqUm38BI");
 
-        assert driver.getTitle().equals("CourseWeb | Sri Lanka Institute of Information Technology");
+        assert driver.getTitle().equals("Marvel Studios' Doctor Strange in the Multiverse of Madness | Official Teaser");
     }
 
     @Nullable
